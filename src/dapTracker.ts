@@ -33,6 +33,5 @@ export function createTracker(): vscode.DebugAdapterTracker {
 			console.log(code);
 			console.log(signal);
 		},
-
-	}
+	};
 }
