@@ -1,0 +1,17 @@
+.vscode/**
+.vscode-test/**
+src/**
+.gitignore
+.yarnrc
+vsc-extension-quickstart.md
+**/tsconfig.json
+**/.eslintrc.json
+**/*.map
+**/*.ts
+docs/**
+sonar-project.properties
+**/*.vsix
+.github/**
+test Fixture with speci@l chars
+test-resources
+.test-extensions

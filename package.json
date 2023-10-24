@@ -1,0 +1,155 @@
+{
+	"name": "datasonnet-vscode-debugger",
+	"displayName": "Debug Adapter for DataSonnet",
+	"description": "Client for the Debug Adapter implementation for DataSonnet",
+	"license": "Apache-2.0",
+	"version": "0.1.0",
+	"preview": true,
+	"publisher": "portx",
+	"icon": "icons/icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/datasonnet/datasonnet-vscode-debugger.git"
+	},
+	"homepage": "https://github.com/datasonnet/datasonnet-vscode-debugger",
+	"bugs": {
+		"url": "https://github.com/datasonnet/datasonnet-vscode-debugger/issues"
+	},
+	"engines": {
+		"vscode": "^1.76.0"
+	},
+	"categories": [
+		"Debuggers"
+	],
+	"keywords": [
+		"DataSonnet",
+		"DAP",
+		"Debug Adapter Protocol",
+		"Debugging"
+	],
+	"main": "./out/extension.js",
+	"activationEvents": [
+		"onLanguage:datasonnet",
+		"workspaceContains:**/*.ds",
+		"workspaceContains:**/*.datasonnet",
+		"workspaceContains:**/*.jsonnet",
+		"workspaceContains:**/*.libsonnet",
+		"workspaceContains:**/*.datasonnet.TEMPLATE",
+		"onDebug"
+	],
+	"contributes": {
+		"breakpoints": [
+			{
+				"language": "datasonnet"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Debug Adapter for DataSonnet",
+			"properties": {
+			}
+		},
+		"debuggers": [
+			{
+				"type": "datasonnet",
+				"label": "DataSonnet Debug",
+				"languages": [
+					"datasonnet"
+				],
+				"configurationAttributes": {
+					"launch": {
+						"properties": {
+							"type": {
+								"type": "string",
+								"description": "Debugger type - datasonnet"
+							},
+							"payload": {
+								"type": "string",
+								"description": "payload to be passed on to the Mapper"
+							},
+							"program": {
+								"type": "string",
+								"description": "datasonnet script to run"
+							},
+							"fileBasename": {
+								"type": "string",
+								"description": "name of the program file. Use \"${fileBasename}\""
+							},
+							"outputType": {
+								"type": "string",
+								"description": "MIME type of the output, can be application/json, application/xml or text/csv"
+							}
+						}
+					}
+				},
+				"initialConfigurations": [
+					{
+						"type": "datasonnet",
+						"request": "launch",
+						"name": "Launch Datasonnet Debugger"
+					}
+				],
+				"configurationSnippets": [
+					{
+						"label": "DataSonnet: Launch Debugger",
+						"description": "Launches a DataSonnet Mapper on debug mode",
+						"body": {
+							"name": "Launch DataSonnet Debugger",
+							"type": "datasonnet",
+							"request": "launch",
+							"program": "${file}",
+							"payload": "${workspaceFolder}/resources/payload.json"				
+						}
+					}
+				]
+			}
+		],
+		"problemMatchers": [
+		],
+		"commands": [
+			{
+				"command": "datasonnet.debug.current",
+				"category": "DataSonnet",
+				"title": "Debug a DataSonnet script",
+				"icon": "$(run-view-icon)",
+				"enablement": "resourceFilename =~ /\\.(datasonnet|libsonnet|ds)$/"
+			}
+		],
+		"menus": {
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./ && npm run lint",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./scripts/postinstall.js",
+		"pretest": "npm run compile",
+		"preui-test": "npm run compile",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js",
+		"ui-test": "node --unhandled-rejections=warn-with-error-code out/ui-test/uitest_runner.js"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.3.6",
+		"@types/glob": "^8.1.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.76.0",
+		"@typescript-eslint/eslint-plugin": "^6.7.0",
+		"@vscode/test-electron": "^2.3.4",
+		"@vscode/debugadapter": "^1.56.0",
+		"@vscode/debugprotocol": "1.56.0",		
+		"async-wait-until": "^2.0.12",
+		"chai": "^4.3.8",
+		"eslint": "^8.49.0",
+		"glob": "^10.3.4",
+		"mocha": "^10.2.0",
+		"mocha-jenkins-reporter": "^0.4.8",
+		"mvn-artifact-download": "^6.1.1",
+		"typescript": "^5.2.2",
+		"vscode-uitests-tooling": "^4.0.6"
+	},
+	"dependencies": {
+		"jsonc-parser": "^3.2.0"
+	}
+}
