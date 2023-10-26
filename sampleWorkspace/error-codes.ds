@@ -1,0 +1,19 @@
+local isNullOrEmpty(str) = (cml.header(str) == null || ds.isEmpty(ds.trim(std.toString(cml.header(str)))));
+
+local isMercuryClient = !isNullOrEmpty("clientId") && ds.contains(ds.lower(cml.header("clientId")), "mercury");
+local isPortXClient = !isNullOrEmpty("clientId") && ds.contains(ds.lower(cml.header("clientId")), "portx");
+
+local errCode = if !isNullOrEmpty("errorCode") then cml.header("errorCode")
+  else if isMercuryClient then cml.properties("error.mercury.code")
+       else if isPortXClient then cml.properties("error.mercury.code")
+            else cml.properties("error.default.code");
+
+local errMessage = if !isNullOrEmpty("errorMessage") then cml.header("errorMessage")
+  else if isMercuryClient then cml.properties("error.mercury.message")
+       else if isPortXClient then cml.properties("error.mercury.message")
+            else cml.properties("error.default.message");
+
+{
+  code: errCode,
+  message: errMessage
+}

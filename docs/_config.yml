@@ -1,0 +1,5 @@
+title:  Visual Studio Code debug adapter for Datasonnet and Jsonnet
+logo: https://raw.githubusercontent.com/datasonnet/datasonnet-vscode-debugger/main/icons/icon.png
+description: This is the client implementation of the Debug Adapter Server for Datasonnet for Visual Studio Code
+# Used theme https://github.com/pages-themes/minimal
+theme: jekyll-theme-minimal
