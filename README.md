@@ -33,7 +33,7 @@ This implementation is based on the <a href="https://marketplace.visualstudio.co
 
 ### Debugging Datasonnet
 
-This extension uses the <a href="https://datasonnet.github.io/datasonnet-mapper/datasonnet/latest/jar-lib.html">Datasonnet Mapper</a> to execute the scripts. You can debug and run Datasonnet and Jsonnet scripts. <a href="">Datasonnet</a> <a href="https://datasonnet.github.io/datasonnet-mapper/datasonnet/latest/dataformats.html">adds supports for different formats like XML, CSV and YAML</a>, provides <a href="https://datasonnet.github.io/datasonnet-mapper/datasonnet/latest/libraries-core.html">libraries supporting extra functionality to what Jsonnet provides, and is used primary as a mapping tool. You can check more example in its <a href="https://datasonnet.github.io/datasonnet-mapper/datasonnet/latest/cookbook.html">cookbook</a>.
+This extension uses the <a href="https://datasonnet.github.io/datasonnet-mapper/datasonnet/latest/jar-lib.html">Datasonnet Mapper</a> to execute the scripts. You can debug and run Datasonnet and Jsonnet scripts. <a href="">Datasonnet</a> <a href="https://datasonnet.github.io/datasonnet-mapper/datasonnet/latest/dataformats.html">adds supports for different formats like XML, CSV and YAML</a>, provides <a href="https://datasonnet.github.io/datasonnet-mapper/datasonnet/latest/libraries-core.html">libraries supporting extra functionality</a> to what Jsonnet provides, and is used primary as a mapping tool. You can check more example in its <a href="https://datasonnet.github.io/datasonnet-mapper/datasonnet/latest/cookbook.html">cookbook</a>.
 
 To debug a script, just open it on the editor and create a launch configuration. The minimal launch configuration is:
 
