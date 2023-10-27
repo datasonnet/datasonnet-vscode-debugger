@@ -16,7 +16,7 @@
 		"url": "https://github.com/datasonnet/datasonnet-vscode-debugger/issues"
 	},
 	"engines": {
-		"vscode": "^1.76.0"
+		"vscode": "^1.83.0"
 	},
 	"categories": [
 		"Debuggers"
@@ -134,7 +134,7 @@
 		"@types/glob": "^8.1.0",
 		"@types/mocha": "^10.0.1",
 		"@types/node": "14.x",
-		"@types/vscode": "^1.76.0",
+		"@types/vscode": "^1.83.0",
 		"@typescript-eslint/eslint-plugin": "^6.7.0",
 		"@vscode/test-electron": "^2.3.4",
 		"@vscode/debugadapter": "^1.56.0",
