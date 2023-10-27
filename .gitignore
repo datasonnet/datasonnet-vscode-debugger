@@ -3,6 +3,6 @@ dist
 node_modules
 .vscode-test/
 *.vsix
-jars/*.jar
+# jars/*.jar
 test-resources
 .test-extensions

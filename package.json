@@ -119,6 +119,9 @@
 		"menus": {
 		}
 	},
+	"galleryBanner": {
+		"color": "#4FC7E7"
+	  },	
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./ && npm run lint",
