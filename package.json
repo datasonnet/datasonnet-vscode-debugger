@@ -3,7 +3,7 @@
 	"displayName": "Debug Extension for DataSonnet",
 	"description": "Datasonnet and Jsonnet debugger for Visual Studio Code",
 	"license": "SEE LICENSE IN LICENSE",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"preview": true,
 	"publisher": "PortX",
 	"icon": "icons/icon.png",
@@ -47,8 +47,7 @@
 		"configuration": {
 			"type": "object",
 			"title": "Debug Adapter for DataSonnet",
-			"properties": {
-			}
+			"properties": {}
 		},
 		"debuggers": [
 			{
@@ -99,14 +98,13 @@
 							"type": "datasonnet",
 							"request": "launch",
 							"program": "${file}",
-							"payload": "${workspaceFolder}/resources/payload.json"				
+							"payload": "${workspaceFolder}/resources/payload.json"
 						}
 					}
 				]
 			}
 		],
-		"problemMatchers": [
-		],
+		"problemMatchers": [],
 		"commands": [
 			{
 				"command": "datasonnet.debug.current",
@@ -116,12 +114,11 @@
 				"enablement": "resourceFilename =~ /\\.(datasonnet|libsonnet|ds)$/"
 			}
 		],
-		"menus": {
-		}
+		"menus": {}
 	},
 	"galleryBanner": {
 		"color": "#4FC7E7"
-	  },	
+	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./ && npm run lint",
@@ -142,7 +139,7 @@
 		"@typescript-eslint/eslint-plugin": "^6.7.0",
 		"@vscode/test-electron": "^2.3.4",
 		"@vscode/debugadapter": "^1.56.0",
-		"@vscode/debugprotocol": "1.56.0",		
+		"@vscode/debugprotocol": "1.56.0",
 		"async-wait-until": "^2.0.12",
 		"chai": "^4.3.8",
 		"eslint": "^8.49.0",
