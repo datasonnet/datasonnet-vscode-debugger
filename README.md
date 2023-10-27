@@ -89,6 +89,8 @@ Once the extension is published we need to add the dependency automatically usin
 - Add/Remove breakpoints
 - Inspect variable values on suspended breakpoints
 - Stepping
+- Output is printed on the Debug Console
+- You can set input and output formats ( JSON, XML, CSV )
 
 <!-- ### Requirements
 
@@ -119,7 +121,7 @@ Our full documentation is located in [GitHub pages](https://datasonnet.github.io
 
 Something is not working properly? In that case, feel free to [open issues, add feature requests, report bugs, etc.](https://github.com/datasonnet/datasonnet-vscode-debugger/issues)
 
-### Get Involved
+<!-- ### Get Involved
 
-If you'd like to help us get better, we appriciate it! Check out our [Contribution Guide](Contributing.md) on how to do that.
+If you'd like to help us get better, we appriciate it! Check out our [Contribution Guide](Contributing.md) on how to do that. -->
 
