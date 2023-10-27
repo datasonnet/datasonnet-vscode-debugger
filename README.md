@@ -60,6 +60,28 @@ And if you need to specify an output type other than JSON, set the following typ
 ```json
   "outputType": "application/xml"
 ```
+
+### Dependencies
+
+To be able to set breakpoints, you need to install a Datasonner Language Exstension. While we have this extension in preview, you'll need to manually install the extension from a VSIX file. The file can be found [on this extension's repo](https://raw.githubusercontent.com/datasonnet/datasonnet-vscode-debugger/main/deps/datasonnet-vscode-debugger-0.1.0.vsix)
+
+Once you have the file, you can go on VS Code to the `extensions` tab, next on the ellipsis menu above to `Install from VSIX` and then install the extension.
+
+Once you have both extensions enabled, they'll look like this:
+
+
+<p align="center"><img src="./docs/images/extensions-installed.png" alt="Both extensions installed." width="100%"/></p>
+
+
+<!--
+Once the extension is published we need to add the dependency automatically using:
+
+	"extensionDependencies": [
+		"datasonnet.datasonnet-lsp"
+	],
+-->
+
+
   
 ### Features
 

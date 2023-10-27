@@ -1,11 +1,11 @@
 {
 	"name": "datasonnet-vscode-debugger",
-	"displayName": "Debug Adapter for DataSonnet",
-	"description": "Client for the Debug Adapter implementation for DataSonnet",
-	"license": "Apache-2.0",
+	"displayName": "Debug Extension for DataSonnet",
+	"description": "Datasonnet and Jsonnet debugger Visual Studio Code Extension",
+	"license": "SEE LICENSE IN LICENSE",
 	"version": "0.1.0",
 	"preview": true,
-	"publisher": "portx",
+	"publisher": "PortX",
 	"icon": "icons/icon.png",
 	"repository": {
 		"type": "git",
@@ -16,7 +16,7 @@
 		"url": "https://github.com/datasonnet/datasonnet-vscode-debugger/issues"
 	},
 	"engines": {
-		"vscode": "^1.83.0"
+		"vscode": "^1.76.0"
 	},
 	"categories": [
 		"Debuggers"
@@ -25,7 +25,8 @@
 		"DataSonnet",
 		"DAP",
 		"Debug Adapter Protocol",
-		"Debugging"
+		"Debugging",
+		"Jsonnet"
 	],
 	"main": "./out/extension.js",
 	"activationEvents": [
@@ -134,7 +135,7 @@
 		"@types/glob": "^8.1.0",
 		"@types/mocha": "^10.0.1",
 		"@types/node": "14.x",
-		"@types/vscode": "^1.83.0",
+		"@types/vscode": "^1.76.0",
 		"@typescript-eslint/eslint-plugin": "^6.7.0",
 		"@vscode/test-electron": "^2.3.4",
 		"@vscode/debugadapter": "^1.56.0",
