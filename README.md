@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-This is the <a href="https://code.visualstudio.com/">Visual Studio Code</a> extension that adds support for debugging <a href="https://datasonnet.com">Datasonnet</a> and <a href="https://jsonnet.org/">Jsonnet</a> scripts.
+This is a <a href="https://code.visualstudio.com/">Visual Studio Code</a> extension that adds support for debugging <a href="https://datasonnet.com">Datasonnet</a> and <a href="https://jsonnet.org/">Jsonnet</a> scripts.
 </p><br/>
 
 <p align="center"><img src="./docs/images/breakpoint.png" alt="Script with breakpoints, showing the variables and in progress mapping." width="100%"/></p>

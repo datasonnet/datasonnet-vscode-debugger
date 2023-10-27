@@ -1,9 +1,9 @@
 {
 	"name": "datasonnet-vscode-debugger",
 	"displayName": "Debug Extension for DataSonnet",
-	"description": "Datasonnet and Jsonnet debugger Visual Studio Code Extension",
+	"description": "Datasonnet and Jsonnet debugger for Visual Studio Code",
 	"license": "SEE LICENSE IN LICENSE",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"preview": true,
 	"publisher": "PortX",
 	"icon": "icons/icon.png",
